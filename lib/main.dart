@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
+import 'widgets/preview_filtro.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+        appBar: AppBar(title: const Text('Filtro Productos')),
+
+        body: const Column(children: [PreviewFiltro()]),
       ),
     );
   }
